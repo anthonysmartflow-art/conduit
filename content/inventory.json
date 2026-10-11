@@ -1,0 +1,512 @@
+{
+  "pages": [
+    "/",
+    "/booking",
+    "/thought",
+    "/thought/10k-hours",
+    "/university",
+    "/terms",
+    "/privacy-policy",
+    "/participant-notices"
+  ],
+  "assets": [
+    "/assets/videos/conduit-bg.mp4",
+    "/assets/images/conduit-bg.png",
+    "/assets/images/conduit-logo.png",
+    "/thought/10k-hours/images/image4.png",
+    "/thought/10k-hours/images/image6.jpg",
+    "/thought/10k-hours/images/image11.png",
+    "/thought/10k-hours/images/image5.png",
+    "/thought/10k-hours/images/image1.png",
+    "/thought/10k-hours/images/image10.jpg",
+    "/thought/10k-hours/images/image3.jpg",
+    "/thought/10k-hours/images/image2.png",
+    "/thought/10k-hours/images/image12.png",
+    "/thought/10k-hours/images/image7.png",
+    "/thought/10k-hours/images/image8.png",
+    "/thought/10k-hours/images/image13.jpg",
+    "/thought/10k-hours/images/image9.png"
+  ],
+  "links": [
+    {
+      "page": "home",
+      "href": "/thought",
+      "label": "Blog Our thoughts Our thoughts"
+    },
+    {
+      "page": "home",
+      "href": "/terms.html",
+      "label": "Terms of Service"
+    },
+    {
+      "page": "home",
+      "href": "/privacy-policy.html",
+      "label": "Privacy Policy"
+    },
+    {
+      "page": "booking",
+      "href": "/",
+      "label": "conduit"
+    },
+    {
+      "page": "booking",
+      "href": "index.html",
+      "label": "Back to Home Return to Main Page Return to Main Page"
+    },
+    {
+      "page": "booking",
+      "href": "/terms.html",
+      "label": "Terms of Service"
+    },
+    {
+      "page": "booking",
+      "href": "/privacy-policy.html",
+      "label": "Privacy Policy"
+    },
+    {
+      "page": "booking",
+      "href": "#",
+      "label": "Report an Issue"
+    },
+    {
+      "page": "thought",
+      "href": "/",
+      "label": "conduit"
+    },
+    {
+      "page": "thought",
+      "href": "/booking",
+      "label": "Become A Paid Research Participant Earn up to $50 per session"
+    },
+    {
+      "page": "thought",
+      "href": "/thought/10k-hours",
+      "label": "December 7, 2025 How we collected 10,000 hours of neuro-language data in our basement What we learned about operations and ML from running data collection 20 hours a day"
+    },
+    {
+      "page": "thought",
+      "href": "/terms.html",
+      "label": "Terms of Service"
+    },
+    {
+      "page": "thought",
+      "href": "/privacy-policy.html",
+      "label": "Privacy Policy"
+    },
+    {
+      "page": "article",
+      "href": "/",
+      "label": "conduit"
+    },
+    {
+      "page": "article",
+      "href": "/thought",
+      "label": "Back to Thoughts View All Posts"
+    },
+    {
+      "page": "article",
+      "href": "#fn1",
+      "label": "[1]"
+    },
+    {
+      "page": "article",
+      "href": "https://openneuro.org/datasets/ds002345/versions/1.1.4",
+      "label": "here"
+    },
+    {
+      "page": "article",
+      "href": "https://openneuro.org/datasets/ds003643/versions/2.0.7",
+      "label": "here"
+    },
+    {
+      "page": "article",
+      "href": "https://arxiv.org/abs/2504.21214",
+      "label": "here"
+    },
+    {
+      "page": "article",
+      "href": "https://www.nature.com/articles/sdata2018291",
+      "label": "here"
+    },
+    {
+      "page": "article",
+      "href": "https://arxiv.org/abs/2502.17480",
+      "label": "here"
+    },
+    {
+      "page": "article",
+      "href": "https://www.sciencedirect.com/science/article/pii/S1878929324001312",
+      "label": "here"
+    },
+    {
+      "page": "article",
+      "href": "https://arxiv.org/abs/2407.07595",
+      "label": "here"
+    },
+    {
+      "page": "article",
+      "href": "https://thesai.org/Downloads/Volume16No4/Paper_85-Speech_Decoding_from_EEG_Signals.pdf",
+      "label": "here"
+    },
+    {
+      "page": "article",
+      "href": "#fn2",
+      "label": "[2]"
+    },
+    {
+      "page": "article",
+      "href": "#introduction",
+      "label": "Introduction"
+    },
+    {
+      "page": "article",
+      "href": "#what-participants-do",
+      "label": "What participants actually do"
+    },
+    {
+      "page": "article",
+      "href": "#headsets",
+      "label": "Headsets"
+    },
+    {
+      "page": "article",
+      "href": "#modalities",
+      "label": "Modalities"
+    },
+    {
+      "page": "article",
+      "href": "#training-vs-inference",
+      "label": "Training vs. inference"
+    },
+    {
+      "page": "article",
+      "href": "#noise-reduction",
+      "label": "Noise Reduction"
+    },
+    {
+      "page": "article",
+      "href": "#why-noise-matters-less",
+      "label": "Why noise matters much less at scale"
+    },
+    {
+      "page": "article",
+      "href": "#scaling-the-operation",
+      "label": "Scaling the operation"
+    },
+    {
+      "page": "article",
+      "href": "#people-and-bookings",
+      "label": "People and bookings"
+    },
+    {
+      "page": "article",
+      "href": "#marginal-cost",
+      "label": "Marginal cost per usable hour of data"
+    },
+    {
+      "page": "article",
+      "href": "#now-what",
+      "label": "Now What"
+    },
+    {
+      "page": "article",
+      "href": "#appendix",
+      "label": "Appendix: Booths"
+    },
+    {
+      "page": "article",
+      "href": "#fn3",
+      "label": "[3]"
+    },
+    {
+      "page": "article",
+      "href": "#fn4",
+      "label": "[4]"
+    },
+    {
+      "page": "article",
+      "href": "https://www.amazon.com/dp/B07FPFVZTZ",
+      "label": "these fans"
+    },
+    {
+      "page": "article",
+      "href": "https://www.amazon.com/dp/B0791V19H7",
+      "label": "these pipes"
+    },
+    {
+      "page": "article",
+      "href": "#fn5",
+      "label": "[5]"
+    },
+    {
+      "page": "article",
+      "href": "#fn6",
+      "label": "[6]"
+    },
+    {
+      "page": "article",
+      "href": "https://www.acxesspring.com/english/catalogsearch/advanced/result/?category=cs&unit_measure=en&cs_od%5Bfrom%5D=0.4&cs_od%5Bto%5D=0.6&cs_fl%5Bfrom%5D=0.9&cs_fl%5Bto%5D=1.1&material_type=0&cs_rt%5Bfrom%5D=0.3&cs_rt%5Bto%5D=2&form_key=uJgOhWqe9j9Ipypv",
+      "label": "various strengths of spring"
+    },
+    {
+      "page": "article",
+      "href": "https://mne.discourse.group/t/psd-power-peaks-at-25-and-0-hz/6148",
+      "label": "MNE"
+    },
+    {
+      "page": "article",
+      "href": "#fn7",
+      "label": "[7]"
+    },
+    {
+      "page": "article",
+      "href": "https://www.uline.com/Product/Detail/H-3086/Anti-Fatigue-Mats/Cadillac-Mat-3-8-thick-2-x-2-Black?pricode=WA9154&gadtype=pla&id=H-3086&gad_source=1&gad_campaignid=10688098445&gbraid=0AAAAAD_uetMrP89IMnou9MvnpRfxBK41U&gclid=CjwKCAiAraXJBhBJEiwAjz7MZb_nvjmv-n2pAcf2_9lEM78xU_45GjlWEVIgyg9rE71AHd_dCU8fHBoCGfAQAvD_BwE",
+      "label": "rubber mats"
+    },
+    {
+      "page": "article",
+      "href": "https://www.amazon.com/Furman-Conditioner-Protector-Electrical-Extension/dp/B008A85LL2",
+      "label": "adapters that plug into the wall and output clean power"
+    },
+    {
+      "page": "article",
+      "href": "https://www.ankersolix.com/products/c1000?variant=49702371524938",
+      "label": "Anker batteries"
+    },
+    {
+      "page": "article",
+      "href": "#fn8",
+      "label": "[8]"
+    },
+    {
+      "page": "article",
+      "href": "https://arxiv.org/abs/2212.04356",
+      "label": "here"
+    },
+    {
+      "page": "article",
+      "href": "https://arxiv.org/pdf/1912.06430",
+      "label": "here"
+    },
+    {
+      "page": "article",
+      "href": "#fn9",
+      "label": "[9]"
+    },
+    {
+      "page": "article",
+      "href": "#fn10",
+      "label": "[10]"
+    },
+    {
+      "page": "article",
+      "href": "#fn11",
+      "label": "[11]"
+    },
+    {
+      "page": "article",
+      "href": "https://sfbay.craigslist.org/sfc/lbg/d/san-francisco-chat-with-ai-get-paid-up/7896688506.html",
+      "label": "in"
+    },
+    {
+      "page": "article",
+      "href": "https://sfbay.craigslist.org/sfc/crg/d/san-francisco-think-fast-type-fast-earn/7897143450.html",
+      "label": "sections"
+    },
+    {
+      "page": "article",
+      "href": "https://sfbay.craigslist.org/sfc/wrg/d/san-francisco-two-hours-one-headset/7893366908.html",
+      "label": "from"
+    },
+    {
+      "page": "article",
+      "href": "https://sfbay.craigslist.org/sfc/cpg/d/san-francisco-earn-550-testing-new/7896689107.html",
+      "label": "computer"
+    },
+    {
+      "page": "article",
+      "href": "https://sfbay.craigslist.org/sfc/wrg/d/san-francisco-up-to-550-to-chat-with-ai/7894838033.html",
+      "label": "to"
+    },
+    {
+      "page": "article",
+      "href": "https://sfbay.craigslist.org/sfc/crg/d/san-francisco-up-to-550-to-chat-with-ai/7895293226.html",
+      "label": "creative"
+    },
+    {
+      "page": "article",
+      "href": "https://sfbay.craigslist.org/sfc/lbg/d/san-francisco-join-the-research-thats/7893367163.html",
+      "label": "to"
+    },
+    {
+      "page": "article",
+      "href": "https://sfbay.craigslist.org/sfc/lbg/d/san-francisco-we-strap-device-to-your/7897143946.html",
+      "label": "labor gigs"
+    },
+    {
+      "page": "article",
+      "href": "#fn12",
+      "label": "[12]"
+    },
+    {
+      "page": "article",
+      "href": "https://www.amazon.com/dp/B0F2HCHS52",
+      "label": "EVERSECU cameras"
+    },
+    {
+      "page": "article",
+      "href": "#fn13",
+      "label": "[13]"
+    },
+    {
+      "page": "article",
+      "href": "mailto:contact@condu.it",
+      "label": "contact@condu.it"
+    },
+    {
+      "page": "article",
+      "href": "mailto:jobs@condu.it",
+      "label": "jobs@condu.it"
+    },
+    {
+      "page": "article",
+      "href": "#fn14",
+      "label": "[14]"
+    },
+    {
+      "page": "article",
+      "href": "https://www.amazon.com/Vondynote-Desktop-Speaker-Monitor-Adjustable/dp/B0C1NHTNN6/ref=sr_1_5?crid=1EMUTNK27HD3R&dib=eyJ2IjoiMSJ9.oKWo-hoGxOY41YRBZ1z6jBnI3UaB-8lUM7TE5fQyokQL8pxhLH2H0eBShU8HGHo_hzWWmfClRVX3PUbFWmaAEeC6ECWAUmlxEogINUhyreaSAV2TmKUtbGVKEuexz4CFNNIOe1E50kSNIr6HneQca7p5eK0AQ3w3_8dV9--G0RmcXOFZed1t6tXNSNxZ8mBjo3BhejOb1wQJ1X2UiaTnZ4KWuPZTgIKyO7rR_CpAV9DywLeCwPJbXKXqNXfR_N5M43K_3mCoM2uEtLK68-cjEtT7nPo6e7VjvuC_-kib3i4.HhLWkX9pJEmlPk5gG6qVEWdN8dywr0f-9_JSJVH0PsA&dib_tag=se&keywords=speaker%2Bstand&qid=1764383726&s=musical-instruments&sprefix=speaker%2Bstan,mi,170&sr=1-5",
+      "label": "speaker stands"
+    },
+    {
+      "page": "article",
+      "href": "https://zenbooth.net/products/zenbooth-duo?srsltid=AfmBOopJCM2lQH9yLpdLhC7OVeurtDVG1i-mPuu-NiCQ_Hh39xfmQS3g&variant=32767488819271",
+      "label": "these nice phone booths"
+    },
+    {
+      "page": "article",
+      "href": "https://www.amazon.com/dp/B0DJ3CNQFP?ref=cm_sw_r_cso_cp_apin_dp_1KJDHPCHRDQ55WCFM532&ref_=cm_sw_r_cso_cp_apin_dp_1KJDHPCHRDQ55WCFM532&social_share=cm_sw_r_cso_cp_apin_dp_1KJDHPCHRDQ55WCFM532&previewDoh=1&th=1",
+      "label": "these vocal recording booths"
+    },
+    {
+      "page": "article",
+      "href": "https://www.amazon.com/dp/B0DM5V3ZMJ?ref=ppx_pop_mob_ap_share",
+      "label": "soundproof curtains"
+    },
+    {
+      "page": "article",
+      "href": "#fn15",
+      "label": "[15]"
+    },
+    {
+      "page": "article",
+      "href": "https://www.amazon.com/dp/B0CR15SX4S?ref=ppx_pop_mob_ap_share&th=1",
+      "label": "sound panels"
+    },
+    {
+      "page": "article",
+      "href": "/terms.html",
+      "label": "Terms of Service"
+    },
+    {
+      "page": "article",
+      "href": "/privacy-policy.html",
+      "label": "Privacy Policy"
+    },
+    {
+      "page": "article",
+      "href": "#fn1-mobile",
+      "label": "[1]"
+    },
+    {
+      "page": "university",
+      "href": "/",
+      "label": "conduit"
+    },
+    {
+      "page": "university",
+      "href": "/booking",
+      "label": "Become A Paid Research Participant Earn up to $50 per session"
+    },
+    {
+      "page": "university",
+      "href": "/terms.html",
+      "label": "Terms of Service"
+    },
+    {
+      "page": "university",
+      "href": "/privacy-policy.html",
+      "label": "Privacy Policy"
+    },
+    {
+      "page": "terms",
+      "href": "/",
+      "label": "conduit"
+    },
+    {
+      "page": "terms",
+      "href": "/terms.html",
+      "label": "Terms of Use"
+    },
+    {
+      "page": "terms",
+      "href": "/privacy-policy.html",
+      "label": "Privacy Policy"
+    },
+    {
+      "page": "terms",
+      "href": "/participant-notices.html",
+      "label": "Participant Notices"
+    },
+    {
+      "page": "terms",
+      "href": "mailto:booking@condu.it",
+      "label": "booking@condu.it"
+    },
+    {
+      "page": "privacy",
+      "href": "/",
+      "label": "conduit"
+    },
+    {
+      "page": "privacy",
+      "href": "/terms.html",
+      "label": "Terms of Use"
+    },
+    {
+      "page": "privacy",
+      "href": "/privacy-policy.html",
+      "label": "Privacy Policy"
+    },
+    {
+      "page": "privacy",
+      "href": "/participant-notices.html",
+      "label": "Participant Notices"
+    },
+    {
+      "page": "privacy",
+      "href": "mailto:booking@condu.it",
+      "label": "booking@condu.it"
+    },
+    {
+      "page": "notices",
+      "href": "/",
+      "label": "conduit"
+    },
+    {
+      "page": "notices",
+      "href": "/terms.html",
+      "label": "Terms of Use"
+    },
+    {
+      "page": "notices",
+      "href": "/privacy-policy.html",
+      "label": "Privacy Policy"
+    },
+    {
+      "page": "notices",
+      "href": "/participant-notices.html",
+      "label": "Participant Notices"
+    }
+  ]
+}
