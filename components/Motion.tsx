@@ -1,27 +1,56 @@
 "use client";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
+import { useMotion } from "./MotionSystem";
 export function NeuralVisual() {
   const video = useRef<HTMLVideoElement>(null);
-  const [playing, setPlaying] = useState(false);
+  const { enabled } = useMotion();
   useEffect(() => {
-    const media = matchMedia("(prefers-reduced-motion: reduce)");
-    const apply = () => {
-      if (media.matches) {
-        video.current?.pause();
-        setPlaying(false);
-      } else {
-        video.current
-          ?.play()
-          .then(() => setPlaying(true))
-          .catch(() => setPlaying(false));
-      }
+    const element = video.current;
+    if (!element) return;
+    let visible = false;
+    const sync = () => {
+      if (enabled && visible && !document.hidden)
+        element.play().catch(() => {});
+      else element.pause();
     };
-    apply();
-    media.addEventListener("change", apply);
-    return () => media.removeEventListener("change", apply);
-  }, []);
+    const observer = new IntersectionObserver(([entry]) => {
+      visible = entry.isIntersecting;
+      element.parentElement?.setAttribute("data-visible", String(visible));
+      sync();
+    });
+    observer.observe(element);
+    document.addEventListener("visibilitychange", sync);
+    return () => {
+      observer.disconnect();
+      document.removeEventListener("visibilitychange", sync);
+      element.pause();
+    };
+  }, [enabled]);
   return (
-    <div className="neural-visual">
+    <div
+      className="neural-visual"
+      onPointerMove={(event) => {
+        if (!enabled || event.pointerType !== "mouse") return;
+        const bounds = event.currentTarget.getBoundingClientRect();
+        event.currentTarget.style.setProperty(
+          "--pointer-x",
+          `${((event.clientX - bounds.left) / bounds.width - 0.5) * 24}px`,
+        );
+        event.currentTarget.style.setProperty(
+          "--pointer-y",
+          `${((event.clientY - bounds.top) / bounds.height - 0.5) * 24}px`,
+        );
+      }}
+      onPointerLeave={(event) => {
+        event.currentTarget.style.setProperty("--pointer-x", "0px");
+        event.currentTarget.style.setProperty("--pointer-y", "0px");
+      }}
+    >
+      <div className="neural-orbit" aria-hidden="true">
+        <i />
+        <i />
+        <i />
+      </div>
       <video
         ref={video}
         muted
@@ -33,25 +62,6 @@ export function NeuralVisual() {
       >
         <source src="/assets/videos/conduit-bg.mp4" type="video/mp4" />
       </video>
-      <button
-        className="motion-toggle"
-        aria-label={
-          playing ? "Pause background animation" : "Play background animation"
-        }
-        onClick={() => {
-          if (playing) {
-            video.current?.pause();
-            setPlaying(false);
-          } else
-            video.current
-              ?.play()
-              .then(() => setPlaying(true))
-              .catch(() => setPlaying(false));
-        }}
-      >
-        {playing ? "Pause motion" : "Play motion"}
-        <span aria-hidden="true">{playing ? "Ⅱ" : "▷"}</span>
-      </button>
     </div>
   );
 }

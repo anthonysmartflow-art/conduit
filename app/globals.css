@@ -1344,3 +1344,288 @@ li[id] {
 .prose table {
   font-variant-numeric: tabular-nums;
 }
+
+/* The motion layer is opt-in after hydration; the static document is complete. */
+.type-line {
+  display: block;
+  position: relative;
+  width: max-content;
+  max-width: 100%;
+  white-space: nowrap;
+}
+.type-reserve {
+  visibility: hidden;
+}
+.type-ink {
+  position: absolute;
+  inset: 0 auto auto 0;
+}
+.typing-cursor {
+  display: inline-block;
+  width: 3px;
+  height: 0.72em;
+  margin-left: 0.045em;
+  background: currentColor;
+}
+html[data-motion="on"] .typing-cursor {
+  animation: typing-blink 1s step-end infinite;
+}
+@keyframes typing-blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+.reading-progress {
+  position: fixed;
+  z-index: 100;
+  inset: 0 0 auto;
+  height: 2px;
+  background: var(--ink);
+  transform: scaleX(0);
+  transform-origin: left;
+  pointer-events: none;
+}
+html:not([data-motion="on"]) .reading-progress {
+  display: none;
+}
+.site-motion-toggle {
+  position: fixed;
+  bottom: 18px;
+  right: max(18px, env(safe-area-inset-right));
+  z-index: 60;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 44px;
+  padding: 10px 15px;
+  border: 1px solid var(--line);
+  border-radius: 100px;
+  background: var(--paper);
+  box-shadow: 0 3px 20px #191b1c0b;
+  font-size: 12px;
+  line-height: 1;
+}
+.site-motion-toggle:disabled {
+  cursor: default;
+}
+.motion-bars {
+  height: 15px;
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+.motion-bars i {
+  width: 2px;
+  height: 12px;
+  background: currentColor;
+  transform: scaleY(0.35);
+}
+html[data-motion="on"] .motion-bars i {
+  animation: signal-bars 1.2s ease-in-out infinite alternate;
+}
+html[data-motion="on"] .motion-bars i:nth-child(2) {
+  animation-delay: -0.7s;
+}
+html[data-motion="on"] .motion-bars i:nth-child(3) {
+  animation-delay: -0.3s;
+}
+@keyframes signal-bars {
+  to {
+    transform: scaleY(1);
+  }
+}
+.neural-orbit {
+  position: absolute;
+  inset: 16%;
+  pointer-events: none;
+  opacity: 0.4;
+}
+.neural-orbit i {
+  position: absolute;
+  inset: 0;
+  border: 1px solid #d1d9d4;
+  border-radius: 50%;
+}
+.neural-orbit i:nth-child(2) {
+  inset: 10%;
+  transform: rotateX(55deg) rotateZ(-24deg);
+}
+.neural-orbit i:nth-child(3) {
+  inset: 20%;
+  transform: rotateY(55deg) rotateZ(24deg);
+}
+.neural-orbit i::after {
+  content: "";
+  position: absolute;
+  top: 15%;
+  left: 15%;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--ink);
+}
+html[data-motion="on"] .neural-orbit {
+  animation: orbit-turn 38s linear infinite;
+}
+html[data-motion="on"] .neural-orbit i:nth-child(2) {
+  animation: orbit-turn 22s linear infinite reverse;
+}
+html[data-motion="on"] .neural-orbit i:nth-child(3) {
+  animation: orbit-turn 17s linear infinite;
+}
+@keyframes orbit-turn {
+  to {
+    rotate: 360deg;
+  }
+}
+html[data-motion="on"] .neural-visual {
+  animation: neural-breathe 7s ease-in-out infinite alternate;
+}
+@keyframes neural-breathe {
+  from {
+    translate: 0 5px;
+  }
+  to {
+    translate: 0 -9px;
+  }
+}
+html[data-motion="on"] .neural-visual video {
+  transform: translate3d(var(--pointer-x, 0px), var(--pointer-y, 0px), 0);
+  transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+html[data-motion="on"] .header-inner {
+  animation: header-arrive 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+@keyframes header-arrive {
+  from {
+    transform: translateY(-18px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+html[data-motion="on"] :is(.button, .nav-cta, .site-motion-toggle) {
+  transition:
+    transform 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+    background 0.25s,
+    color 0.25s,
+    box-shadow 0.25s;
+}
+html[data-motion="on"] :is(.button, .nav-cta):active {
+  transform: scale(0.97);
+}
+html[data-motion="on"] :is(.button, .nav-cta, .text-link) svg {
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+html[data-motion="on"] .research-photo img {
+  transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+html[data-motion="on"] .brand img {
+  transition: rotate 0.65s cubic-bezier(0.16, 1, 0.3, 1);
+}
+html[data-motion="on"] :is(.footer a:not(.brand), .prose a, .back-link) {
+  background-image: linear-gradient(currentColor, currentColor);
+  background-position: left bottom;
+  background-size: 0% 1px;
+  background-repeat: no-repeat;
+  transition: background-size 0.4s ease;
+}
+@media (hover: hover) and (pointer: fine) {
+  html[data-motion="on"] :is(.button, .nav-cta, .site-motion-toggle):hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px #191b1c12;
+  }
+  html[data-motion="on"] :is(.button, .nav-cta, .text-link):hover svg {
+    transform: translateX(6px);
+  }
+  html[data-motion="on"] .research-feature:hover .research-photo img {
+    transform: scale(0.98) translateY(-4px);
+  }
+  html[data-motion="on"] .brand:hover img {
+    rotate: 15deg;
+  }
+  html[data-motion="on"]
+    :is(.footer a:not(.brand), .prose a, .back-link):hover {
+    background-size: 100% 1px;
+  }
+}
+html[data-motion="on"] .prose details[open] summary::after {
+  transition: transform 0.35s ease;
+}
+.footer {
+  padding-bottom: 68px;
+}
+@media (max-width: 780px) {
+  html[data-motion="on"] .nav.is-open {
+    animation: menu-arrive 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  html[data-motion="on"] .nav.is-open a {
+    animation: menu-link-arrive 0.65s cubic-bezier(0.16, 1, 0.3, 1) both;
+  }
+  html[data-motion="on"] .nav.is-open a:nth-child(2) {
+    animation-delay: 0.06s;
+  }
+  html[data-motion="on"] .nav.is-open a:nth-child(3) {
+    animation-delay: 0.12s;
+  }
+  .site-motion-toggle {
+    bottom: max(12px, env(safe-area-inset-bottom));
+    right: 12px;
+  }
+}
+@keyframes menu-arrive {
+  from {
+    transform: translateY(-12px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+@keyframes menu-link-arrive {
+  from {
+    transform: translateX(-12px);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+html[data-motion="off"] {
+  scroll-behavior: auto;
+}
+html[data-motion="off"] *,
+html[data-motion="off"] *::before,
+html[data-motion="off"] *::after {
+  animation: none !important;
+  transition: none !important;
+}
+@media (prefers-reduced-motion: reduce) {
+  .neural-orbit {
+    display: none;
+  }
+  .reading-progress {
+    display: none;
+  }
+}
+@media print {
+  .site-motion-toggle,
+  .reading-progress,
+  .neural-orbit {
+    display: none;
+  }
+  .type-reserve {
+    visibility: visible;
+  }
+  .type-ink {
+    display: none;
+  }
+}
+
+html[data-motion="on"] .neural-visual:not([data-visible="true"]),
+html[data-motion="on"] .neural-visual:not([data-visible="true"]) .neural-orbit,
+html[data-motion="on"] .neural-visual:not([data-visible="true"]) .neural-orbit i {
+  animation-play-state: paused;
+}

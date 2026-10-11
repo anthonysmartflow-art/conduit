@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import "./globals.css";
+import { MotionProvider } from "@/components/MotionSystem";
 import LocalAudit from "@/components/LocalAudit";
 export const metadata: Metadata = {
   metadataBase: new URL("https://conduit-redesign-hngr.vercel.app"),
@@ -22,9 +23,11 @@ export default function RootLayout({
         <a className="skip-link" href="#main">
           Skip to content
         </a>
-        <Header />
-        {children}
-        <Footer />
+        <MotionProvider>
+          <Header />
+          {children}
+          <Footer />
+        </MotionProvider>
         {process.env.NODE_ENV === "development" && <LocalAudit />}
       </body>
     </html>

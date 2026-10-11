@@ -2,6 +2,7 @@ import Link from "next/link";
 import copy from "@/content/site.json";
 import article from "@/content/article.json";
 import { Arrow } from "@/components/Header";
+import { TypewriterHeading } from "@/components/MotionSystem";
 import { NeuralVisual } from "@/components/Motion";
 export const metadata = { alternates: { canonical: "/" } };
 export default function Home() {
@@ -10,12 +11,7 @@ export default function Home() {
       <section className="hero shell">
         <div className="hero-copy">
           <p className="eyebrow">The conduit between your mind and AI</p>
-          <h1>
-            Thought<span className="dash">-</span>
-            <br />
-            to-text
-            <span className="cursor" aria-hidden="true" />
-          </h1>
+          <TypewriterHeading />
           <div className="hero-action">
             <Link className="button primary" href="/booking">
               {copy["landing.heroCtaPrimary"]}

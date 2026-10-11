@@ -19,3 +19,11 @@ Automated accessibility checks are not a formal accessibility certification. Rea
 
 ## Compiled production check
 The built production server loaded successfully. No development audit component was rendered. The video pause control paused playback; the original 20.02-second video is delivered at 568×320 with its full 16:9 frame. The participation CTA reached the local booking page, and “View available sessions” reached https://condu.it/booking with the real “Request a Research Session” heading. No browser console errors were reported in this production path. Article responsive WebP candidates reduced the combined largest derivatives from 8.9 MB of original figures to 1.2 MB; original files remain available.
+
+## Animation release — October 11, 2026
+- Added a repeating typed/erased Thought-to-text heading with fixed line geometry and a complete accessible heading; observed both partial and completed text in the browser.
+- Added staggered scroll entrances across all eight routes, neural orbit/breathing/pointer effects, reading progress, mobile menu entrances, hover interactions, and disclosure animation. Native animation APIs; no new production dependencies.
+- Global pause verified to stop video, typing, orbit, CSS transitions and scroll effects; the full heading remains readable. Preference survived reload. Video and orbit pause offscreen; reading progress advances on scroll. OS reduced-motion handling is implemented but OS emulation remains unavailable in the browser tool.
+- All eight routes at 390 CSS pixels: zero axe WCAG A/AA violations and no horizontal overflow. Contrast checks on several pages remained marked incomplete during animation; original text colors and solid control backgrounds are unchanged.
+- Homepage rendered at 319, 390, 768, 1024, and 1440 CSS pixels. Fixed transformed orbit bounds that caused a 2px tablet overflow; 768/1024 widths rechecked with no overflow. Mobile menu opens and Escape closes/restores focus. Client-side navigation to Thoughts works with motion enabled.
+- Production build, strict types and 161 source-content checks passed. Compiled production server checked for typing, video playback, global pause, offscreen pause and reading progress. No browser console errors observed.
